@@ -21,7 +21,14 @@ const Button = ({ variant, type, title, icon, full }: ButtonProps) => {
       }`}
       type={type}
     >
-      {icon && <Image src={`/${icon}`} width={24} height={24} alt={title} />}
+      {icon && (
+        <Image
+          src={`/${icon}`}
+          width={24}
+          height={24}
+          alt={`${title}_${Math.floor(Math.random() * 10)}`}
+        />
+      )}
       <label className="bold-16 whitespace-nowrap cursor-pointer">
         {title}
       </label>

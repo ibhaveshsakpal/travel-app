@@ -12,13 +12,14 @@ const Navbar = () => {
       </Link>
       <ul className="hidden gap-12 h-full lg:flex">
         {NAV_LINKS.map((item) => (
-          <Link
-            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
-            href={item.href}
-            key={item.key}
-          >
-            {item.label}
-          </Link>
+          <li key={item.key}>
+            <Link
+              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </li>
         ))}
       </ul>
       <div className="hidden lg:flexCenter">
